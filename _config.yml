@@ -9,7 +9,7 @@ description: Nous réalisons des spectacles, des films, des vidéoclips, des ém
 version: 0.0.11
 logo: tome-park-logo.svg
 social-image: og-image.jpg
-url: "https://www.tomepark.com"
+url: "https://tomepark-com.netlify.app"
 analytics-code: UA-152877314-1
 
 # Favicon settings - use realfavicon generator
