@@ -1,0 +1,11 @@
+<div class="hero">
+    <div class="hero__wrap">
+        <div class="hero__content">
+            {{ page.title | markdownify }}
+            {{ page.description | markdownify }}
+        </div>
+        <div class="hero__logo">
+            <img src="{{ site.logo | prepend: 'img/' | absolute_url }}" alt="{{ site.title | append: ' Logo' }}">
+        </div>
+    </div>
+</div>

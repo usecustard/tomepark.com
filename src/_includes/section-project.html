@@ -1,0 +1,10 @@
+<a class="section-project" alt="{{section.title}} | {{section.subtitle}}" {% if section.vimeo-id %} href="https://player.vimeo.com/video/{{ section.vimeo-id }}?autoplay=1&title=0&byline=0&portrait=0" data-featherlight="iframe" data-featherlight-iframe-frameborder="0" data-featherlight-iframe-allow="autoplay; encrypted-media" data-featherlight-iframe-allowfullscreen="true" data-featherlight-iframe-style="overflow:hidden;background:#000;display:block;border:none;width:95vw;height:95vh;" {% else %} href="{{section.link}}" target="_blank" {% endif %} style="
+    background-image: url('{{ section.image | prepend: "img/" | absolute_url }}');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;">
+    <div class="section-project__content section-project__content--desktop">
+        <h3 class="section-project__title">{{ section.title }}</h3>
+        <p class="section-project__subtitle">{{ section.subtitle }}</p>
+    </div>
+</a>

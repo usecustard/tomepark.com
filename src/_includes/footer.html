@@ -1,0 +1,29 @@
+<div class="footer-items">
+
+    <div class="footer-item">
+        <h3 class="footer-item__title">{% if page.lang=='fr' %}{{ site.data.services.title.fr }}{% else %}{{ site.data.services.title.en }}{% endif %}</h3>
+        <ul class="footer-item__list">
+            {% for service in site.data.services.services %}
+                <li>{% if page.lang=='fr' %}{{ service.fr }}{% else %}{{ service.en }}{% endif %}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="footer-item">
+        <h3 class="footer-item__title">{% if page.lang=='fr' %}{{ site.data.clients.title.fr }}{% else %}{{ site.data.clients.title.en }}{% endif %}</h3>
+        <ul class="footer-item__list">
+            {% for client in site.data.clients.clients %}
+                <li>{% if page.lang=='fr' %}{{ client.fr }}{% else %}{{ client.en }}{% endif %}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</div>
+
+<div class="trim">
+    <img src="{{ 'tome-park-logo.svg' |  prepend: 'img/' | absolute_url }}" alt="{{page.title}}">
+</div>
+
+<p class="credits">
+    Design: Jimmy Pelchat | {% if page.lang='fr' %}Site Web{% else %}Website{% endif %}: Jeremy Turowetz
+</p>

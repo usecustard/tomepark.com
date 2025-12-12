@@ -1,0 +1,60 @@
+.section-project {
+    width: 100%;
+    flex: 1 1 auto;
+    align-self: stretch;
+    background-color: #000;
+
+    @media ( min-width: $small-devices ) {
+        width: 50%;
+    }
+
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+        text-decoration: none;
+    }
+
+    .section-project__content {
+        text-align: center;
+        text-decoration: none;
+        padding: 3rem 2rem;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgba(0,0,0,0.8);
+
+        @media ( min-width: $small-devices ) {
+            padding: 5rem 4rem;
+        }
+
+        @media ( min-width: $large-devices ) {
+            padding: 8rem 4rem;
+        }
+
+        // This class gets removed by JS on mobile devices, so it doesn't need to be wrapped in a @media query
+        &--desktop {
+            opacity: 0;
+            transition: opacity 0.45s;
+
+            &:hover {
+                opacity: 1;
+            }
+
+        }
+
+        .section-project__title {
+            color: #fff;
+            margin: 0 0 0.25em 0;
+            line-height: #{$line-height - 0.2};
+        }
+
+        .section-project__subtitle {
+            color: #fff;
+            margin: 0;
+        }
+
+    }
+
+}

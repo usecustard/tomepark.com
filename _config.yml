@@ -1,0 +1,59 @@
+# Welcome to Jekyll!
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: TOMÉ PARK
+description: Nous réalisons des spectacles, des films, des vidéoclips, des émissions et des contenus d’exposition en collaboration avec des artistes, des designers, des concepteurs, des producteurs, des diffuseurs, des organismes et des marques.
+version: 0.0.11
+logo: tome-park-logo.svg
+social-image: og-image.jpg
+url: "https://www.tomepark.com"
+analytics-code: UA-152877314-1
+
+# Favicon settings - use realfavicon generator
+icon-color: '#ff0000'
+msapplication-TileColor: '#ff0000'
+theme-color: '#ff0000'
+
+# Contact
+# phone: "438-380-3473"
+email: "t@tomepark.com"
+
+# Social
+facebook: https://www.facebook.com/tomepark
+instagram: https://www.instagram.com/tomepark/
+vimeo: https://vimeo.com/thomasleblanc
+
+# Build settings
+permalink: pretty
+destination: public
+source: src
+markdown: kramdown
+plugins:
+  - jekyll-feed
+sass:
+  style: compressed # possible values: nested expanded compact compressed
+
+# Exclude from processing.
+#
+# Don't forget that Jekyll automatically
+# excludes files with a dot prefix
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.js
+  - package.json
+  - readme.md
+  - jekyll-ignored/
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+include:
+  - _redirects # for netlify
+
+# keep_files: []

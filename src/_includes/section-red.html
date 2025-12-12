@@ -1,0 +1,10 @@
+<div class="section-red">
+    <div class="section-red__wrap">
+        <div class="section-red__content">
+            {{ section.content | markdownify }}
+        </div>
+        <div class="section-red__image">
+            <img src="{{ section.image | prepend: 'img/' | absolute_url }}">
+        </div>
+    </div>
+</div>

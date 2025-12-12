@@ -1,0 +1,28 @@
+<nav class="main-menu">
+
+    <ul class="menu">
+
+        <li class="menu__item">
+            <a class="menu__link" href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </li>
+
+        <li class="menu__item">
+            <a class="menu__link menu__link--social" href="{{ site.facebook }}" target="_blank"><img src="{{ 'icon-facebook.svg' | prepend: 'img/' | absolute_url }}" alt="Facebook"><span>Facebook</span></a>
+        </li>
+
+        <li class="menu__item">
+            <a class="menu__link menu__link--social" href="{{ site.instagram }}" target="_blank"><img src="{{ 'icon-instagram.svg' | prepend: 'img/' | absolute_url }}" alt="Instagram"><span>Instagram</span></a>
+        </li>
+
+        <li class="menu__item">
+                <a class="menu__link menu__link--social" href="{{ site.vimeo }}" target="_blank"><img src="{{ 'icon-vimeo.svg' | prepend: 'img/' | absolute_url }}" alt="Vimeo"><span>Vimeo</span></a>
+            </li>
+
+        <li class="menu__item menu__item--lang-switch">
+            {% capture lang %}{% if page.lang == 'en' %}fr{% else %}en{%endif%}{% endcapture %}
+            <a class="menu__link" href="{{ lang | append: '/' | absolute_url }}">{{lang}}</a>
+        </li>
+
+    </ul>
+
+</nav>

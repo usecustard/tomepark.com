@@ -1,0 +1,26 @@
+.section-demo-reel {
+    flex: 2 1 auto;
+    width: 100%;
+    background-color: #000000;
+
+    &-box-wrapper {
+        margin: 0 auto;
+        width: 100%;
+        max-width: #{ $max-width * 1.5 + 'rem'};
+        padding: 3rem 2rem;
+
+        @media ( min-width: $small-devices ) {
+            padding: 5rem 2rem;
+        }
+
+        @media ( min-width: $large-devices ) {
+            padding: 8rem 2rem;
+        }
+
+        iframe {
+            border: 10px solid #000000;
+        }
+
+    }
+
+}

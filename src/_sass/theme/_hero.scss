@@ -1,0 +1,58 @@
+.hero {
+    padding-top: $hero-menu-buffer;
+    flex: 2 1 auto;
+
+    &__wrap {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+
+        max-width: #{ $max-width * 1.5 + 'rem'};
+        min-height: 95vh;
+        margin: 0 auto;
+        padding: 0 2rem 3rem;
+
+        @media ( min-width: $small-devices ) {
+            flex-flow: row nowrap;
+            align-items: stretch;
+            padding: 0 2rem 5rem;
+        }
+
+    }
+
+    &__content {
+        order: 2;
+
+        @media ( min-width: $small-devices ) {
+            order: 0;
+            width: 67%;
+            margin: auto 10% 0 0;
+        }
+
+        p {
+            color: $red;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+    }
+
+    &__logo {
+        order: 1;
+        width: 50%;
+        margin-left: auto;
+
+        @media ( min-width: $small-devices ) {
+            width: 23%;
+        }
+
+        img {
+            padding: 0;
+            margin: 0 0 3rem;
+        }
+
+    }
+
+}

@@ -1,0 +1,64 @@
+.section-red {
+    width: 100%;
+    background-color: $red;
+    flex: 2 1 auto;
+
+    &__wrap {
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+
+        max-width: #{ $max-width * 1.5 + 'rem'};
+        margin: 0 auto;
+        padding: 0 2rem 3rem;
+
+        @media ( min-width: $small-devices ) {
+            flex-flow: row nowrap;
+            align-items: stretch;
+            padding: 5rem 2rem;
+        }
+
+        @media ( min-width: $large-devices ) {
+            padding: 8rem 2rem;
+        }
+
+    }
+
+    &__content {
+        order: 2;
+
+        @media ( min-width: $small-devices ) {
+            order: 0;
+            width: 67%;
+            margin: auto 10% 0 0;
+        }
+
+        p {
+            color: #000;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+        }
+
+    }
+
+    &__image {
+        order: 1;
+        width: 50%;
+        margin-left: auto;
+
+        @media ( min-width: $small-devices ) {
+            width: 23%;
+        }
+
+        img {
+            padding: 0;
+            margin: 0 0 3rem;
+        }
+
+    }
+
+}

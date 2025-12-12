@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header      header  header"
+        "content     content content"
+        "footer      footer  footer";
+}
+
+.main-header {
+    grid-area: header;
+}
+
+.main-footer {
+    grid-area: footer;
+}
+
+.main-content {
+    grid-area: content;
+}

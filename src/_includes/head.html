@@ -1,0 +1,58 @@
+<head>
+
+{% if site.analytics-code %}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{site.analytics-code}}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{site.analytics-code}}');
+</script>
+{% endif %}
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    {% capture page-title %}{{site.title}} | {% if page.title %}{{page.title}}{% endif %}{% endcapture %}
+	{% capture social-image %}{% if page.image %}{{ page.image }}{% else %}{{ site.social-image }}{% endif %}{% endcapture %}
+
+    <title>{{ page-title }}</title>
+    <meta name="description" content="{% if page.description %}{{page.description}}{% else %}{{site.description}}{% endif %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ 'apple-touch-icon.png' | absolute_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ 'favicon-32x32.png' | absolute_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ 'favicon-16x16.png' | absolute_url }}">
+    <link rel="manifest" href="{{ 'site.webmanifest' | absolute_url }}">
+    <link rel="mask-icon" href="{{ 'safari-pinned-tab.svg' | absolute_url }}" color="{{ site.icon-color }}">
+    <meta name="msapplication-TileColor" content="{{ site.msapplication-TileColor }}">
+    <meta name="theme-color" content="{{ site.theme-color }}">
+
+    <!-- CSS & fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Vesper+Libre:400,500,700,900|Roboto:700" rel="stylesheet">
+    <link rel="stylesheet" href="{{ 'css/style.css' | absolute_url }}"/>
+
+    <!-- Facebook -->
+    <meta property="og:image" content="{{ social-image | prepend: 'img/' | absolute_url }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:title" content="{{ page-title }}">
+    <meta property="og:description" content="{% if page.description %}{{page.description}}{% else %}{{site.description}}{% endif %}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ page-title }}">
+    <meta name="twitter:description" content="{% if page.description %}{{page.description}}{% else %}{{site.description}}{% endif %}">
+    <meta name="twitter:image" content="{{ social-image | prepend: 'img/' | absolute_url }}">
+    <meta name="twitter:url" content="{{ page.url | absolute_url }}">
+
+    <!-- Featherlight jQuery lightbox -->
+    <link href="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+</head>
